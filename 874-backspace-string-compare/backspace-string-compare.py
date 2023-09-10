@@ -1,14 +1,15 @@
 class Solution:
     def backspaceCompare(self, s: str, t: str) -> bool:
-        stackS, stackT = self.checkBackspace(s), self.checkBackspace(t)
+        stackS, stackT = self.helper(s), self.helper(t)
         return stackS == stackT
 
-    
-    def checkBackspace(self, s):
+
+    def helper(self, s):
         stack = []
         for c in s:
-            if c != '#':
-                stack.append(c)
+            if c == "#":
+                if stack:
+                    stack.pop()
             else:
-                stack.pop() if stack else stack
+                stack.append(c)
         return stack
