@@ -5,5 +5,6 @@ class Solution:
             diff = target - n
             if diff in dic:
                 return [dic[diff], i]
-            
-            dic[n] = i
+            else:
+                dic[n] = i
+                
