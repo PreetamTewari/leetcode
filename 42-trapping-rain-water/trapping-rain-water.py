@@ -3,6 +3,7 @@ class Solution:
         l, r = 0, len(h) - 1
         lM, rM = h[l], h[r]
         res = 0
+
         while l < r:
             if lM < rM:
                 l += 1
