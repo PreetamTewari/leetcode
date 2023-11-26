@@ -5,10 +5,11 @@ class Solution:
         for i, a in enumerate(nums):
             if a > 0:
                 continue
-            if i > 0 and nums[i - 1] == a:
+            
+            if i > 0 and a == nums[i-1]:
                 continue
-
-            l, r = i + 1, len(nums) - 1
+            
+            l, r = i+1, len(nums) -1
             while l < r:
                 ts = a + nums[l] + nums[r]
                 if ts > 0:
@@ -18,6 +19,6 @@ class Solution:
                 else:
                     res.append([a, nums[l], nums[r]])
                     l += 1
-                    while l < r and nums[l] == nums[l-1]:
+                    while l < r and nums[l] == nums[l -1]:
                         l += 1
         return res
