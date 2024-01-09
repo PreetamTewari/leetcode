@@ -3,8 +3,7 @@ class Solution:
         # return len(nums) > len(set(nums))
         dic = {}
         for n in nums:
-            if n in dic.keys():
+            if n in dic:
                 return True
-            else:
-                dic[n] = n
+            dic[n] = n
         return False
