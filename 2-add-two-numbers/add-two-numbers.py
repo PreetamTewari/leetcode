@@ -8,6 +8,7 @@ class Solution:
         dummy = ListNode()
         tail = dummy
         carry = 0
+
         while l1 or l2 or carry:
             n1 = l1.val if l1 else 0
             n2 = l2.val if l2 else 0
