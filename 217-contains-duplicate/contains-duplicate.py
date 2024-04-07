@@ -4,5 +4,5 @@ class Solution:
         for n in nums:
             if n in dic:
                 return True
-            dic[n] = 1 + dic.get(n, 0)
+            dic[n] = 1
         return False
